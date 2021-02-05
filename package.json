@@ -1,0 +1,23 @@
+{
+  "name": "react-firefly",
+  "version": "1.0.0",
+  "description": "React application boilerplate for small project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DenTivor/react-firefly.git"
+  },
+  "keywords": [
+    "react",
+    "boilerplate"
+  ],
+  "author": "DenTivor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DenTivor/react-firefly/issues"
+  },
+  "homepage": "https://github.com/DenTivor/react-firefly#readme"
+}
