@@ -14,6 +14,23 @@ module.exports = {
         test: /\.tsx?$/,
         use: ['babel-loader','ts-loader'],
       },
+      {
+        test: /\.styl$/,
+        use: [
+          {
+            loader: "style-loader",
+          },
+          {
+            loader: "css-loader",
+          },
+          {
+            loader: "stylus-loader",
+            options: {
+              sourceMap: true,
+            },
+          },
+        ]
+      }
     ],
   },
   resolve: {
