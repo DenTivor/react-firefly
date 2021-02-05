@@ -1,8 +1,14 @@
 const path = require('path');
 const webpack = require('webpack');
+// const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: path.resolve(__dirname, './src/index.js'),
+  // resolve: {
+  //   alias: {
+  //     Images: path.resolve(__dirname, 'dist/images'),
+  //   },
+  // },
   module: {
     rules: [
       {
@@ -13,6 +19,22 @@ module.exports = {
       {
         test: /\.tsx?$/,
         use: ['babel-loader','ts-loader'],
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        loader: 'file-loader',
+        options: {
+          name: 'images/[name].[ext]'
+        }
+      },
+      {
+        test: /\.(eot|ttf|woff|woff2)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {name: 'font/[name].[ext]'}  
+          }
+        ]
       },
       {
         test: /\.styl$/,
@@ -30,7 +52,8 @@ module.exports = {
             },
           },
         ]
-      }
+      },
+      
     ],
   },
   resolve: {
@@ -40,7 +63,9 @@ module.exports = {
     path: path.resolve(__dirname, './dist'),
     filename: 'bundle.js',
   },
-  plugins: [new webpack.HotModuleReplacementPlugin()],
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ],
   devServer: {
     contentBase: path.resolve(__dirname, './dist'),
     hot: true,
