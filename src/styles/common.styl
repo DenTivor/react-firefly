@@ -1,29 +1,30 @@
 html, body 
     height: 100%
 
-.wrapper 
-	height: 100%
-	// background-image: url('../images/background.jpg')
-	// background-image: url('/images/tpl-backgrounds/rain-wallpaper-2.jpg')
-	background-position: center center
-	background-repeat: no-repeat
+.application
+    height: 100%
 
-.content 
-    width: 800px
+.cover-page
+    height: 100%
+    width: 100%
+
+    &.standard-background
+        background-image: url(../assets/images/backgrounds/ws_Bridge_1280x720.jpg)
+        background-size: cover
+
+
+.standardCentralSection
     display: table
     height: 100%
     margin: 0 auto
 
-.content-inner 
-	display: table-cell
-	vertical-align: middle
-	text-align: center
-
-body
-    background-image: url(../assets/images/backgrounds/ws_Blue_Bokeh_1280x720.jpg)
-    background-size: cover
+    &__inner
+        display: table-cell
+        vertical-align: middle
+        text-align: center
 
 .mainHeader
     font-family: "Alexbrush-regular", Helvetica, Arial, sans-serif
-    font-size: 40px
+    color: white;
+    font-size: 240px;
 
