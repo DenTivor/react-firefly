@@ -6,7 +6,8 @@ module.exports = {
   entry: path.resolve(__dirname, './src/index.js'),
   // resolve: {
   //   alias: {
-  //     Images: path.resolve(__dirname, 'dist/images'),
+  //     images: path.resolve(__dirname, 'src/assets/images'),
+  //     fonts: path.resolve(__dirname, 'src/assets/fonts'),
   //   },
   // },
   module: {
@@ -40,11 +41,21 @@ module.exports = {
         test: /\.styl$/,
         use: [
           {
-            loader: "style-loader",
+            loader: "style-loader"
           },
           {
             loader: "css-loader",
+            // options: {
+            //   url: true,
+            //   import: false
+            // },
           },
+          // {
+          //   loader: "resolve-url-loader",
+          //   options: {
+          //     engine: 'rework'
+          //   }
+          // },
           {
             loader: "stylus-loader",
             options: {
