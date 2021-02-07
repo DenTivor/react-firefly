@@ -4,8 +4,11 @@ const webpack = require('webpack');
 module.exports = {
   entry: path.resolve(__dirname, './src/index.js'),
   resolve: {
-    // Duplicate alias in babelrc https://stackoverflow.com/a/51979881
+    // Duplicate alias in babelrc & tsconfig
+    // https://stackoverflow.com/a/51979881
+    // http://typescript-lang.ru/docs/Module%20Resolution.html
     alias: {
+      BusinessComponents: path.resolve(__dirname, 'src/scripts/BusinessUI/Components'),
       Components: path.resolve(__dirname, 'src/scripts/Components'),
       Models: path.resolve(__dirname, '/src/scripts/Models'),
       Modules: path.resolve(__dirname, '/src/scripts/Modules'),

@@ -9,7 +9,11 @@
       "noImplicitAny": true,
       "allowSyntheticDefaultImports": true,
       "paths": {
-        "Pages": ["src/scripts/pages"]
-    }
+        "BusinessComponents": ["./src/scripts/BusinessUI/Components"],
+        "Components": ["./src/scripts/Components"],
+        "Models": ["./src/scripts/Models"],
+        "Modules": ["./src/scripts/Modules"],
+        "Pages": ["./src/scripts/Pages"]
+      }
     }
 }

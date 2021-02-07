@@ -6,6 +6,7 @@
   "plugins": [
     ["babel-plugin-module-resolver", {
       "alias": {
+        "BusinessComponents": "./src/scripts/BusinessUI/Components",
         "Components": "./src/scripts/Components",
         "Models": "./src/scripts/Models",
         "Modules": "./src/scripts/Modules",
