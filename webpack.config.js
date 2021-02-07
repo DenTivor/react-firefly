@@ -1,15 +1,18 @@
 const path = require('path');
 const webpack = require('webpack');
-// const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: path.resolve(__dirname, './src/index.js'),
-  // resolve: {
-  //   alias: {
-  //     images: path.resolve(__dirname, 'src/assets/images'),
-  //     fonts: path.resolve(__dirname, 'src/assets/fonts'),
-  //   },
-  // },
+  resolve: {
+    // Duplicate alias in babelrc https://stackoverflow.com/a/51979881
+    alias: {
+      Components: path.resolve(__dirname, 'src/scripts/Components'),
+      Models: path.resolve(__dirname, '/src/scripts/Models'),
+      Modules: path.resolve(__dirname, '/src/scripts/Modules'),
+      Pages: path.resolve(__dirname, 'src/scripts/Pages'),
+    },
+    extensions: ['', '.js', '.jsx', 'ts', 'tsx']
+  },
   module: {
     rules: [
       {
@@ -45,17 +48,7 @@ module.exports = {
           },
           {
             loader: "css-loader",
-            // options: {
-            //   url: true,
-            //   import: false
-            // },
           },
-          // {
-          //   loader: "resolve-url-loader",
-          //   options: {
-          //     engine: 'rework'
-          //   }
-          // },
           {
             loader: "stylus-loader",
             options: {

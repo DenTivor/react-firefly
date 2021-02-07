@@ -2,5 +2,15 @@
   "presets": [
     "@babel/preset-env",
     "@babel/preset-react"
+  ],
+  "plugins": [
+    ["babel-plugin-module-resolver", {
+      "alias": {
+        "Components": "./src/scripts/Components",
+        "Models": "./src/scripts/Models",
+        "Modules": "./src/scripts/Modules",
+        "Pages": "./src/scripts/Pages"
+      }
+    }]
   ]
 }
