@@ -1,0 +1,1 @@
+export { Welcome, IWelcomeProps } from './Welcome/Welcome';
