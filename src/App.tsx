@@ -1,14 +1,21 @@
-import React from 'react';
-// import {IProps} from '~Models/Models';
-import {CoverPage} from 'Pages';
-import {Welcome} from 'Modules';
+import React, {Suspense, lazy} from 'react';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import {
+    ElementsPage,
+    WelcomePage
+} from 'Pages';
 import './styles/styles.styl';
 
 const App = () => {
     return (
-        <CoverPage>
-            <Welcome />
-        </CoverPage>
+        <Router>
+            <Suspense fallback={<div>Loading...</div>}>
+                <Switch>
+                    {/* <Route exact path="/" component={WelcomePage}/> */}
+                    <Route exact path="/" component={ElementsPage}/>
+                </Switch>
+            </Suspense>
+        </Router>
     )    
 };
 

@@ -9,6 +9,7 @@ module.exports = {
     // http://typescript-lang.ru/docs/Module%20Resolution.html
     alias: {
       BusinessComponents: path.resolve(__dirname, 'src/scripts/BusinessUI/Components'),
+      BusinessPages: path.resolve(__dirname, 'src/scripts/BusinessUI/Pages'),
       Components: path.resolve(__dirname, 'src/scripts/Components'),
       Models: path.resolve(__dirname, '/src/scripts/Models'),
       Modules: path.resolve(__dirname, '/src/scripts/Modules'),

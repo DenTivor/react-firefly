@@ -7,10 +7,11 @@
     ["babel-plugin-module-resolver", {
       "alias": {
         "BusinessComponents": "./src/scripts/BusinessUI/Components",
+        "BusinessPages": "./src/scripts/BusinessUI/Pages",
         "Components": "./src/scripts/Components",
         "Models": "./src/scripts/Models",
         "Modules": "./src/scripts/Modules",
-        "Pages": "./src/scripts/Pages"
+        "Pages": "./src/scripts/Pages",
       }
     }]
   ]

@@ -1,1 +1,2 @@
-export { default as CoverPage } from './CoverPage/CoverPage';
+export { WelcomePage } from './WelcomePage/WelcomePage';
+export { ElementsPage } from './ElementsPage/ElementsPage';
