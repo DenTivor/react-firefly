@@ -22,7 +22,9 @@
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
+    "bootstrap": "^4.6.0",
     "react": "^17.0.1",
+    "react-bootstrap": "^1.4.3",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0"
   },
@@ -31,10 +33,12 @@
     "@babel/preset-env": "^7.12.1",
     "@babel/preset-react": "^7.12.1",
     "@types/react": "^17.0.1",
+    "@types/react-bootstrap": "^0.32.25",
     "@types/react-dom": "^17.0.0",
     "@types/react-router-dom": "^5.1.7",
     "babel-loader": "^8.2.2",
     "babel-plugin-module-resolver": "^4.1.0",
+    "bootstrap-4-stylus": "^1.0.7",
     "copy-webpack-plugin": "^7.0.0",
     "css-loader": "^5.0.1",
     "file-loader": "^6.2.0",
